@@ -81,9 +81,31 @@ mongodb://<hostname>:27017,<hostname>:27018,<hostname>:27019/<Your database name
 
 ```
 
-7. Test your setup with the help of this notebook  [mongo_test_connection](/mongo_test_connection)
+7. Test your setup with the help of this notebook  [Testing](Testing.ipynb)
 
 
+# Python Scripts
+
+Okay! Lets get started with the python scripts. We will make 2 scripts
+
+1. 1st is our CSR (customer sales representative) worker script 
+2. 2nd will be the testing script
+
+
+## CSR Script:
+    In this script we will write code to listen mongo insert triggers and perform some opertaion on the inserted mongo-document
+
+## Testing Script:
+    This script will helps us to insert, find and delete requests from the mongo database.
+
+
+## Artitecture Stats
+
+| No of requests  | Time Taken | Processed Requests | missed requests | docker swarm replicas |
+|-|-|-|-|-|
+| 1000 | 949.51 | 996 | 4 | 1 |
+| 3000 | 4387.24 | 2948 | 52 | 1 |
+| 5000 | 10051.78 | 4878 | 122 | 1 |
 
 # Helping Materials
 
