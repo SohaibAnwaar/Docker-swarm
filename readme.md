@@ -99,7 +99,7 @@ Okay! Lets get started with the python scripts. We will make 2 scripts
     This script will helps us to insert, find and delete requests from the mongo database.
 
 
-## Artitecture Stats
+## Architecture Stats
 
 | No of requests  | Time Taken | Processed Requests | missed requests | docker swarm replicas |
 |-|-|-|-|-|
