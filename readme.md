@@ -110,3 +110,5 @@ Okay! Lets get started with the python scripts. We will make 2 scripts
 # Helping Materials
 
 1. [Docker Replica Set](https://www.gyanblog.com/docker/how-run-mongodb-replicaset-docker/)
+2. [Missing Requests Question](https://stackoverflow.com/questions/68235961/mongo-misses-to-catch-insert-triggers)
+3. [Mongo Communication Question](https://stackoverflow.com/questions/68244000/issues-in-communication-of-mongo-db-between-2-servers)
