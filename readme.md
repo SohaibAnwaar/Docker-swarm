@@ -125,7 +125,7 @@ sudo docker service create --replicas 2 --name mongo sohaibanwaar/mongo-triggers
 | 5000 | 47 | 5000 | 0 | 2 |
 | 1000 | 7 | 1000 | 0 | 5 |
 | 3000 | 29 | 3000 | 0 | 5 |
-| 5000 | 67 | 5000 | 0 | 2 |
+| 5000 | 67 | 5000 | 0 | 5 |
     
 
 ## Resources
