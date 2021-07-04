@@ -4,14 +4,27 @@
 # # Customer Sales Representative
 #     Hey I am a customer sales representative. My only work here is to entertain our beloved clients and in results I get a pay raise. (Party) 
 
-# In[1]:
+# In[20]:
+
+
+import pymongo
+
+connectionString = "mongodb://192.168.18.14:27017/magic_shop";
+
+
+myclient = pymongo.MongoClient(connectionString)
+
+print(myclient.list_database_names())
+
+
+# In[21]:
 
 
 from pymongo import MongoClient
 import pymongo
 
 
-connectionString = "mongodb://192.168.18.4:27017,192.168.18.4:27018,192.168.18.4:27019/magic_shop?replicaSet=mongodb-replicaset";
+connectionString = "mongodb://192.168.18.14:27017/magic_shop";
 client           = MongoClient(connectionString)
 db               = client.magic_shop        # test is my database
 col              = db.req                   # Here spam is my collection
@@ -47,6 +60,7 @@ def processing_request(request):
 
 try:
     with db.req.watch([{'$match': {'operationType': 'insert'}}]) as stream:
+        print("Catching Insert Triggers")
         for values in stream:
             request_id = values['fullDocument']['request_id']
             request    = values['fullDocument']['request']
