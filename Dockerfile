@@ -15,6 +15,7 @@ RUN conda init bash && conda update -n base -c defaults conda && conda create -n
 
 RUN  . ~/.bashrc
 
+VOLUME /etc/localtime:/etc/localtime:ro
 
 Run echo "source activate mongo_testing && python CSR.py" > driver.sh
 

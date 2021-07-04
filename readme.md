@@ -99,13 +99,42 @@ Okay! Lets get started with the python scripts. We will make 2 scripts
     This script will helps us to insert, find and delete requests from the mongo database.
 
 
+## Docker Swarm Creation
+
+Pull Docker Image
+
+```
+docker pull sohaibanwaar/mongo-triggers-testing
+```
+
+Start docker swarm 
+
+```
+sudo docker service create --replicas 2 --name mongo sohaibanwaar/mongo-triggers-testing
+```
+
 ## Architecture Stats
 
-| No of requests  | Time Taken | Processed Requests | missed requests | docker swarm replicas |
+| No of requests  | Time Taken/sec | Processed Requests | missed requests | docker swarm replicas |
 |-|-|-|-|-|
-| 1000 | 949.51 | 996 | 4 | 1 |
-| 3000 | 4387.24 | 2948 | 52 | 1 |
-| 5000 | 10051.78 | 4878 | 122 | 1 |
+| 1000 | 4.8 | 1000 | 0 | 1 |
+| 3000 | 21 | 3000 | 0 | 1 |
+| 5000 | 39 | 5000 | 0 | 1 |
+| 1000 | 5.8 | 1000 | 0 | 2 |
+| 3000 | 24 | 3000 | 0 | 2 |
+| 5000 | 47 | 5000 | 0 | 2 |
+| 1000 | 7 | 1000 | 0 | 5 |
+| 3000 | 29 | 3000 | 0 | 5 |
+| 5000 | 67 | 5000 | 0 | 2 |
+    
+
+## Resources
+
+Htop on the upper side represents mongo server and on the below on docker swarm replicas of python script are running.
+
+(Image)[extras/resources.png]
+
+
 
 # Helping Materials
 
