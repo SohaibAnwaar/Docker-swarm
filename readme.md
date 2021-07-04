@@ -132,7 +132,7 @@ sudo docker service create --replicas 2 --name mongo sohaibanwaar/mongo-triggers
 
 Htop on the upper side represents mongo server and on the below on docker swarm replicas of python script are running.
 
-(Image)[extras/resources.png]
+![Image](extras/resources.png)
 
 
 
