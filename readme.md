@@ -101,6 +101,8 @@ Okay! Lets get started with the python scripts. We will make 2 scripts
 
 ## Docker Swarm Creation
 
+Kindly Speceify Mongo Url in env file. Python Script will automatically get the url and run insert triggers on the following database
+
 Pull Docker Image
 
 ```
@@ -110,7 +112,7 @@ docker pull sohaibanwaar/mongo-triggers-testing
 Start docker swarm 
 
 ```
-sudo docker service create --replicas 2 --name mongo sohaibanwaar/mongo-triggers-testing
+sudo docker service create --replicas 2 --name --env MONGO_URL=<YOUR MONGO URL> mongo sohaibanwaar/mongo-triggers-testing
 ```
 
 ## Architecture Stats
