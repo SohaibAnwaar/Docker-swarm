@@ -4,27 +4,26 @@
 # # Customer Sales Representative
 #     Hey I am a customer sales representative. My only work here is to entertain our beloved clients and in results I get a pay raise. (Party) 
 
-# In[20]:
+# In[2]:
 
 
 import pymongo
+import os
 
-connectionString = "mongodb://192.168.18.14:27017/magic_shop";
-
-
+connectionString = os.getenv("MONGO_URL");
 myclient = pymongo.MongoClient(connectionString)
 
 print(myclient.list_database_names())
 
 
-# In[21]:
+# In[3]:
 
 
 from pymongo import MongoClient
 import pymongo
 
 
-connectionString = "mongodb://192.168.18.14:27017/magic_shop";
+connectionString = os.getenv("MONGO_URL");
 client           = MongoClient(connectionString)
 db               = client.magic_shop        # test is my database
 col              = db.req                   # Here spam is my collection

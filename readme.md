@@ -112,7 +112,8 @@ docker pull sohaibanwaar/mongo-triggers-testing
 Start docker swarm 
 
 ```
-sudo docker service create --replicas 2 --name --env MONGO_URL=<YOUR MONGO URL> mongo sohaibanwaar/mongo-triggers-testing
+sudo docker service create --replicas 5 --name mongo -e MONGO_URL="Your Mongo URL" sohaibanwaar/mongo-triggers-testing
+
 ```
 
 ## Architecture Stats
@@ -143,3 +144,4 @@ Htop on the upper side represents mongo server and on the below on docker swarm 
 1. [Docker Replica Set](https://www.gyanblog.com/docker/how-run-mongodb-replicaset-docker/)
 2. [Missing Requests Question](https://stackoverflow.com/questions/68235961/mongo-misses-to-catch-insert-triggers)
 3. [Mongo Communication Question](https://stackoverflow.com/questions/68244000/issues-in-communication-of-mongo-db-between-2-servers)
+4. [Docker Link](https://hub.docker.com/repository/docker/sohaibanwaar/mongo-triggers-testing)
