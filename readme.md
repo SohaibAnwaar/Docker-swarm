@@ -1,3 +1,7 @@
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+[![Documentation Status](https://readthedocs.org/projects/ansicolortags/badge/?version=latest)](http://ansicolortags.readthedocs.io/?badge=latest)
+
+
 # Introduction
 
 Let's get some hands-on on the docker swarm. Docker swarm is one of the most important things which we would need to use on our production. So let's get started to absorb some new skills.
